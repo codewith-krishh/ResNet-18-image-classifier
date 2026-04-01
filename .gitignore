@@ -1,0 +1,47 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Data (VERY IMPORTANT - avoid huge uploads)
+data/
+PetImages/
+
+# Model files (large binaries)
+*.pth
+*.pt
+*.h5
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Distribution / build
+build/
+dist/
+*.egg-info/
+
+# JSON (optional - keep if needed)
+# class_names.json
