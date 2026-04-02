@@ -1,0 +1,56 @@
+<svg width="680" height="466" viewBox="0 0 680 466" xmlns="http://www.w3.org/2000/svg" style="font-family: Arial, sans-serif; background: white;">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- Title -->
+<text font-size="15" font-weight="500" fill="#111" x="340" y="24" text-anchor="middle">Transfer learning pipeline — ResNet-18</text>
+
+<!-- Box 1: Input image (gray) -->
+<rect x="220" y="40" width="240" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#2C2C2A" x="340" y="67" text-anchor="middle">Input image</text>
+
+<!-- Arrow 1 -->
+<line x1="340" y1="84" x2="340" y2="108" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Box 2: Preprocessing (teal) -->
+<rect x="220" y="112" width="240" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#085041" x="340" y="132" text-anchor="middle">Preprocessing</text>
+<text font-size="12" fill="#0F6E56" x="340" y="152" text-anchor="middle">resize 224×224 · normalize</text>
+
+<!-- Arrow 2 -->
+<line x1="340" y1="168" x2="340" y2="192" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Box 3: ResNet-18 base (purple) -->
+<rect x="220" y="196" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#3C3489" x="340" y="216" text-anchor="middle">ResNet-18 base</text>
+<text font-size="12" fill="#534AB7" x="340" y="236" text-anchor="middle">frozen · 11M params</text>
+
+<!-- Right annotation: ResNet -->
+<line x1="460" y1="224" x2="482" y2="224" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3" fill="none"/>
+<text font-size="12" fill="#5F5E5A" x="488" y="219">Pretrained on ImageNet</text>
+<text font-size="12" fill="#5F5E5A" x="488" y="235">1.2M images · frozen</text>
+
+<!-- Arrow 3 -->
+<line x1="340" y1="252" x2="340" y2="276" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Box 4: Linear head (coral) -->
+<rect x="220" y="280" width="240" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#712B13" x="340" y="300" text-anchor="middle">Linear classifier head</text>
+<text font-size="12" fill="#993C1D" x="340" y="320" text-anchor="middle">512 → 2 classes</text>
+
+<!-- Right annotation: head -->
+<line x1="460" y1="308" x2="482" y2="308" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3" fill="none"/>
+<text font-size="12" fill="#5F5E5A" x="488" y="303">Trains from scratch</text>
+<text font-size="12" fill="#5F5E5A" x="488" y="319">on your data only</text>
+
+<!-- Arrow 4 -->
+<line x1="340" y1="336" x2="340" y2="360" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- Box 5: Prediction (green) -->
+<rect x="220" y="364" width="240" height="56" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#27500A" x="340" y="384" text-anchor="middle">Prediction</text>
+<text font-size="12" fill="#3B6D11" x="340" y="404" text-anchor="middle">label · confidence score</text>
+</svg>
